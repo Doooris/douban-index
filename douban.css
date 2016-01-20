@@ -1,0 +1,73 @@
+body{
+		font-family: Helvetica,Arial,sans-serif;
+		margin:0;
+		padding:0;
+}
+p{
+		font-size: 12px;
+}
+.head{
+		width:72%;
+		height: 50px;
+		margin:30px auto;
+		position:relative;
+}
+.signpic{
+}
+.searchform{
+		position: absolute;
+		top:0;
+		left: 190px;
+}
+.searchform input{
+		height:32px;
+		width:285px;
+}
+ul{
+		list-style: none;
+		margin: 0;
+}
+nav{
+		top:5px;
+		left:476px;
+		position:absolute;
+}
+.head ul li{
+		display: inline;
+		margin-right:13px;
+}
+.head .sale{
+		margin-right:0px;
+}
+.head li a{
+		text-decoration: none;
+		font-size:24px;
+		font-weight: bold;
+		letter-spacing: -2px;
+		margin-right: 0;
+}
+.head .read{
+    color:#4D3B27;
+}
+.head .movie{
+		color:#2789C6;
+}
+.head .music{
+    color:#F37F00;
+}
+.head .group{
+		color:#0F959D;
+}
+.head .city{
+		color:#E85205;
+}
+.head .fm{
+		color:#98CEBF;
+		font-weight:500;
+}
+.head .thing{
+		color:#D35040;
+}
+.head .market{
+		color:#508900;
+}
