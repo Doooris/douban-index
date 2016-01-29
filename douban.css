@@ -1,40 +1,45 @@
-body{
-		font-family: Helvetica,Arial,sans-serif;
-		margin:0;
-		padding:0;
-}
 p{
-		font-size: 12px;
+		font-family: Helvetica,Arial,sans-serif;
+	  font-size: 12px;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+	margin:0; padding:0;
+	box-sizing: border-box;
+}
+.clear{
+	clear: both;
 }
 .head{
 		width:72%;
 		height: 50px;
-		margin:30px auto;
+		margin:30px auto 10px;
 		position:relative;
-}
-.signpic{
 }
 .searchform{
 		position: absolute;
 		top:0;
 		left: 190px;
 }
+.search-sign{
+	color:#A9A9A9;
+	margin-left: -35px;
+}
 .searchform input{
 		height:32px;
-		width:285px;
+		width:275px;
+	outline: none;
 }
 ul{
 		list-style: none;
-		margin: 0;
 }
 nav{
 		top:5px;
-		left:476px;
+		left:495px;
 		position:absolute;
 }
 .head ul li{
 		display: inline;
-		margin-right:13px;
+		margin-right:12px;
 }
 .head .sale{
 		margin-right:0px;
@@ -44,12 +49,11 @@ nav{
 		font-size:24px;
 		font-weight: bold;
 		letter-spacing: -2px;
-		margin-right: 0;
 }
 .head .read{
     color:#4D3B27;
 }
-.head .movie{
+.head .sidebar-title {
 		color:#2789C6;
 }
 .head .music{
@@ -71,3 +75,538 @@ nav{
 .head .market{
 		color:#508900;
 }
+.app-about{
+	background-color: #EEF4ED;
+}
+.login{
+	height:178px;
+	width:86%;
+	overflow: hidden;
+	position: relative;
+}
+.login .titlepic{
+	margin-left:100px;
+}
+.login .version{
+	position: absolute;
+	top:33px;
+	left:588px;
+	font-size:25px;
+	color:#434343;
+  font-weight:500;
+}
+.login .version span{
+	font-weight:bold;
+	color:#666666;
+	letter-spacing: -2px;
+}
+.login .idea{
+	position:absolute;
+	top:68px;
+	left:590px;
+	letter-spacing: 3.5px;
+}
+.login .app-download{
+	position:absolute;
+	top:105px;
+	left:590px;
+	background-color: #3B9B50;
+	height:29px;
+	width:119px;
+	box-sizing: border-box;
+  border-radius: 3px;
+}
+.login .app-download p{
+	color: white;
+	text-align: center;
+	line-height:29px;
+}
+.login .app-download span{
+	margin-right:4px;
+}
+.login .code-area{
+	position:absolute;
+	top:105px;
+	padding:3px;
+	box-sizing: border-box;
+	left:716px;
+	height:29px;
+	width:29px;
+	border:solid 1px #48AA0D;
+	border-radius:3px;
+	background: url("images/code.png");
+	background-size:98% 98%;
+	-webkit-box-sizing:98% 98%;
+	background-origin: content-box;
+	-webkit-background-origin: content-box;;
+	background-repeat: no-repeat;
+}
+.loginform{
+	position: absolute;
+	left:885px;
+	top:25px;
+}
+.loginform .pw{
+	height:32px;
+	width:270px;
+	margin-top:5px;
+}
+.loginform .name,.loginform .password{
+	height:32px;
+	width:270px;
+	border: solid 1px #D8E0D8;
+	outline: none;
+	padding:0 5px;
+	box-sizing: border-box;
+}
+.loginform .password{
+	float: left;
+}
+.loginform ::-webkit-input-placeholder{
+	color:#626262;
+}
+.loginform .help{
+  float: right;
+	margin-right:10px;
+	margin-top:-32px;
+}
+.loginform .help a{
+	text-decoration: none;
+	font-size: 12px;
+	color:#C6C6C6;
+	line-height: 32px;
+}
+.loginform .signup{
+	height:30px;
+	width:131px;
+	padding-left:22px;
+	padding-right:22px;
+	box-sizing: border-box;
+	background-color:#30A080;
+	border: none;
+	margin-top:8px;
+	border-radius: 2px;
+	color: white;
+}
+.loginform .register{
+	height:30px;
+	width:131px;
+	padding-left:22px;
+	padding-right:22px;
+	box-sizing: border-box;
+	background-color: #EEF4ED;
+	border:solid 1px #30A080;
+	color:#30A080;
+	border-radius: 2px;
+}
+.loginform .remember{
+	margin:0 5px 0 0;
+	vertical-align:middle;
+}
+.loginform .reme{
+	margin-top: 7px;
+	float: left;
+}
+.loginform span{
+	font-size:12px;
+	color: #666666;
+}
+.loginform .signup-method{
+	float:right;
+	width:48px;
+	height:20px;
+	margin-top: 12px;
+}
+.loginform .weichat{
+	height:20px;
+	width:18px;
+	display: inline-block;
+	background: url("http://img3.douban.com/f/sns/4f36445742b91d6a68fcc644827a00bcd536a4bb/pics/sns/anony_home/login/wechat.png");
+  background-size: 85% 60%;
+	background-repeat: no-repeat;
+}
+.loginform .weibo{
+	height:20px;
+	width:18px;
+	display: inline-block;
+	background: url("http://img3.douban.com/f/sns/875cb9fc6e5463efbfcdaaecb05c103a2864a68d/pics/sns/anony_home/login/weibo.png");
+	background-size: 85% 60%;
+	background-repeat: no-repeat;
+}
+.important{
+	width:71%;
+	margin:35px auto 50px;
+	box-sizing: border-box;
+}
+.important .hot-spot{
+	width:72%;
+	float: left;
+	box-sizing: border-box;
+}
+.important .selected{
+	width:28%;
+	float:left;
+	box-sizing: border-box;
+}
+h3{
+	font-size:15px;
+	color: #072;
+	font-weight:300;
+	margin-bottom: 10px;
+}
+h3 .ellipsis{
+	color:#007782;
+	font-weight:300;
+	font-size:12px;
+	letter-spacing: 5px;
+}
+h3 a{
+	color: #37a;
+	font-size: 10px;
+	text-decoration: none;
+}
+h3 .bracket{
+	color:#5F5D86;
+}
+.important .hot-pic{
+	float: left;
+	width:55%;
+	box-sizing: border-box;
+	column-width: 170px;
+	-webkit-column-width: 170px;
+	column-gap: 0px;
+	-webkit-column-gap:0px;
+}
+.important .hot-pic a{
+	text-decoration: none;
+	color:#3377AA;
+}
+.item .title{
+	line-height: 20px;
+	margin-top: -4px;
+}
+.important .hot-pic span{
+	color:#999999;
+}
+.important .item{
+	margin:0 0 10px 0;
+	width:170px;
+}
+.important .hot-article{
+	width:42%;
+	float: left;
+	padding:0 10px 0 10px;
+	box-sizing: border-box;
+}
+.hot-article .article{
+	margin-bottom: 15px;
+}
+.hot-article .title,.activity-online .title{
+	line-height: 20px;
+}
+.hot-article .title a,.selected .activity-online a{
+	color:#3471A5;
+	text-decoration: none;
+}
+.hot-article .author{
+	color:#989898;
+	line-height: 15px;
+	margin-top: 2px;
+}
+.hot-article .intro{
+	color:#666666;
+	line-height: 20px;
+}
+.selected .moment{
+	width:268px;
+	height:110px;
+	background: url("http://img3.doubanio.com/img/files/file-1431585796.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin-bottom:10px;
+}
+.activity-online .time{
+	color:#999999;
+	line-height: 20px;
+}
+.selected .activity{
+	margin-bottom: 8px;
+}
+.movie-section{
+	background-color:#F7F7F7;
+	padding-top: 40px;
+	padding-bottom: 20px;
+
+}
+.out-frame{
+	width:71%;
+	margin:0 auto;
+}
+.leftside-bar{
+	width:13%;
+	float: left;
+}
+.main{
+	width:58%;
+	float: left;
+}
+.group-section .main h3 a{
+	color:#017A85;
+}
+.rightside-bar{
+	width:28%;
+	float:left;
+	padding-left:15px;
+}
+.leftside-bar .sidebar-title {
+	text-decoration: none;
+	font-weight:400;
+}
+h2{
+	margin-bottom: 10px;
+}
+.leftside-bar li a{
+	text-decoration: none;
+	font-size:14px;
+	line-height: 27px;
+}
+.movie-section .sidebar-li-color,.movie-section #sidebar-title-color{
+	color:#2277AA;
+}
+.movie-section .main-content-list,.read-section .main-content-list{
+	column-width: 100px;
+	-webkit-column-width: 100px;
+	column-gap:5px;
+	-webkit-column-gap:5px;
+	margin-left:15px;
+	column-count: 4;
+	-webkit-column-count: 4;
+
+}
+.main-content-list .item{
+  margin-bottom: 40px;
+	width:100px;
+}
+.item .item-link{
+	text-decoration: none;
+  font-size:13px;
+	color:#333333;
+}
+.item .item-title{
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	text-align: center;
+	margin-top:15px;
+	margin-bottom: -15px;
+
+
+}
+.item .picket-info-link{
+	text-decoration: none;
+	color:white;
+	font-size:13px;
+}
+.item .picket-info{
+	text-align: center;
+	background-color:#1C8BD0;
+	padding:5px 0;
+	width:70px;
+	border-radius: 2px;
+	margin-left:15px;
+	margin-top:3px;
+}
+.item .star-sign{
+	height:20px;
+	width:80px;
+	background:url("images/star.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin-left:10px;
+}
+.movie-category{
+	margin-bottom:30px;
+}
+.movie-table a{
+	font-size:13px;
+	color:#2277AA;
+	text-decoration: none;
+}
+.movie-table tr{
+	height:23px;
+}
+.movie-table td{
+	width:46px;
+}
+.recent-pop a{
+	text-decoration: none;
+	color:#2277AA;
+	font-size:13px;;
+}
+.recent-pop span{
+	color:#585250;
+}
+.recent-pop li{
+	height: 29px;
+	border-bottom:solid 1px #F7EDC1;
+}
+.group-section{
+	padding-top:40px;
+}
+.group-main{
+	column-count:2;
+	-webkit-column-count:2;
+	column-width:50%;
+	-webkit-column-width:50%;
+	padding-top:5px;
+}
+.group-main .hot-group{
+	position:relative;
+	margin-bottom: 40px;
+}
+.group-main .group-info{
+	position:absolute;
+	left: 67px;
+	top:0;
+}
+.group-info .group-title a{
+	text-decoration:none;
+	color:#007982;
+}
+.group-info .member{
+	margin-top:10px;
+	color:#999999;
+}
+.group-section .sidebar-li-color,.group-section #sidebar-title-color{
+	color:#007982;
+}
+.group-category .group-category-content{
+	margin-top:20px;
+}
+.group-item{
+	margin-bottom:20px;
+}
+.group-item .group-item-list{
+	margin-top:1px;
+}
+.group-item .group-item-list li{
+	display: inline-block;
+  margin-right:5px;
+}
+.group-item .group-item-title a{
+	text-decoration: none;
+	font-size:14px;
+	color:#333333;
+}
+.group-item .group-item-list li a{
+	text-decoration: none;
+	font-size:12px;
+	color:#007982;
+}
+.group-item .group-item-title span{
+	font-size:1px;
+}
+.read-section{
+	background-color:#F7F7F7;
+	padding:50px 0;
+}
+.douban-read .douban-sign {
+	height:50px;
+	width:50px;
+	background: url("images/readsign.png");
+	background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	box-shadow:2px 2px #B9B9B9 ;
+	border-radius: 10px;
+  border:solid 1px #EAEAEA;
+}
+.read-section a{
+	text-decoration: none;
+	color:#614E3C;
+}
+.douban-read{
+	margin-top:20px;
+}
+.read-section .main-content-item{
+	width:100px;
+}
+.read-secton .main-content-pic,.read-section img{
+	height:150px;
+	width:100px;
+}
+.read-section .main-content-name{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: center;
+	margin-top:12px;
+}
+.read-section .main-content-author{
+	text-align:center;
+	margin-top:10px;
+	white-space:nowrap;
+}
+.read-section .try-read-container{
+	background-color:#999A95;
+	height:23px;
+	width:68px;
+	margin: 4px auto;
+	border-radius: 2px;
+}
+.read-section .try-read  a{
+	color:white;
+}
+.read-section .try-read{
+	line-height:23px;
+	text-align: center;
+}
+.read-section .mainabove-part{
+	margin-bottom:30px;
+}
+.read-section .main-content-price{
+	color:#666666;
+	text-align: center;
+	margin:5px 5px 8px;
+}
+.hot-read-list li{
+	display: inline-block;
+	font-size:12px;
+	margin-right:2px;
+}
+.read-section .hot-read-item{
+	margin-bottom:25px;
+	margin-top:15px;
+}
+.read-section .hot-read-list-type{
+	color:#999999;
+}
+.music-section #sidebar-title-color{
+	color:#F38C00;
+}
+.music-section{
+	padding:50px 0;
+}
+.music-section .douban-FM,.music-section .douban-musicer{
+	margin-top:20px;
+}
+.music-section .douban-FM-sign img,.music-section .douban-musicer-sign img{
+	border-radius:10px;
+}
+.music-section a{
+	text-decoration:none;
+	color:#555D53;
+}
+.music-section .main-content-name,.music-section .main-content-singer{
+	text-align:center;
+	white-space: nowrap;
+}
+.music-section .main-content-list{
+	margin:0;
+}
+
+
+
+
+
+
+
