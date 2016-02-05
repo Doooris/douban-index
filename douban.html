@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <title>豆瓣</title>
     <link rel="stylesheet" href="douban.css">
+    <script type="text/javascript" src="jquery-1.12.0.js"></script>
+    <script type="text/javascript" src="douban.js"></script>
     <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.css">
 </head>
 <body>
     <header>
        <div class="head">
-           <img class="signpic" src="images/sign.png" alt="">
+           <a href="http://www.douban.com/"><img class="signpic" src="images/sign.png" alt=""></a>
            <form class="searchform" action="" method="get">
                <input type="search" name="user_search" placeholder="书籍、电影、音乐、小组、小站、成员" id="">
-               <i class="fa fa-search search-sign"></i>
+               <a href=""><i class="fa fa-search" style="color:#D5D5D5;font-size:13px;margin-left:-30px;"></i></a>
            </form>
 
            <nav>
@@ -30,23 +32,33 @@
        </div>
         <div class="app-about">
             <div class="login">
-               <img src="images/titlepic.png" class="titlepic" alt="">
+                <div class="titlepic">
+                    <img src="images/titlepic.png" alt="">
+                </div>
                 <h1 class="version">豆瓣 <span>3.0</span></h1>
                 <p class="idea">和有趣的人做有趣的事</p>
                 <div class="app-download">
-                    <p><span>下载豆瓣</span>App</p>
+                    <a href="http://www.douban.com/doubanapp/app?channel=nimingye"><p><span>下载豆瓣</span>App</p></a>
                 </div>
-                <div class="code-area"></div>
-               <form action="" method="post" class="loginform">
+                <div class="code">
+                    <div class="code-area"></div>
+                    <div class="code-expand">
+                        <img src="images/qrcode.png" alt="">
+                        <p>iOS/Android 扫码直接下载</p>
+                    </div>
+                </div>
+               <form action="https://www.douban.com/accounts/login" method="post" class="loginform">
                    <input class="name" type="text" name="name" placeholder="邮箱/手机号" autocomplete="on">
                    <div class="pw">
                        <input class="password" type="password" name="password" placeholder="密码">
                        <div class="help">
-                           <a href="">帮助</a>
+                           <a href="http://www.douban.com/accounts/resetpassword" target="_self">帮助</a>
                        </div>
                    </div>
-                   <input class="signup" type="submit" value="登录豆瓣">
-                   <input class="register" type="submit" value="注册账号">
+                   <div class="signup-box">
+                       <input class="signup" type="submit" value="登录豆瓣">
+                       <a href="http://www.douban.com/accounts/register" class="register">注册账号</a>
+                   </div>
                    <div class="reme">
                        <label >
                            <input class="remember" type="checkbox"  name="remember"><span>记住我</span>
@@ -54,8 +66,16 @@
                    </div>
                    <div class="signup-method">
                        <ul>
-                           <li class="weichat"><a href=""></a></li>
-                           <li class="weibo"><a href=""></a></li>
+                           <li class="weichat">
+                               <a href="http://www.douban.com/accounts/connect/wechat/?from=douban-web-anony-home" target="_blank">
+                                   <img src="http://img3.douban.com/f/sns/4f36445742b91d6a68fcc644827a00bcd536a4bb/pics/sns/anony_home/login/wechat.png" width="14px" height="12px" alt="">
+                               </a>
+                           </li>
+                           <li class="weibo">
+                               <a href="http://www.douban.com/accounts/connect/sina_weibo/?from=douban-web-anony-home" target="_blank">
+                                   <img src="http://img3.douban.com/f/sns/875cb9fc6e5463efbfcdaaecb05c103a2864a68d/pics/sns/anony_home/login/weibo.png" width="14px" height="12px" alt="">
+                               </a>
+                           </li>
                        </ul>
                    </div>
                </form>
@@ -71,15 +91,15 @@
                     <p class="title"><a href="">KP作戦本部</a> <span>100张照片</span></p>
                 </div>
                 <div class="item">
-                    <img src="images/pic2015.png" alt="">
+                    <a href=""><img src="images/pic2015.png" alt=""></a>
                     <p class="title"><a href="">2015年拍的照片—彩色</a> <span>31张照片</span></p>
                 </div>
                 <div class="item">
-                    <img src="images/tree.png" alt="">
+                    <a href=""><img src="images/tree.png" alt=""></a>
                     <p class="title"><a href="">[ 树 ] </a> <span>20张照片</span></p>
                 </div>
                 <div class="item">
-                    <img src="images/daytime.png" alt="">
+                    <a href=""><img src="images/daytime.png" alt=""></a>
                     <p class="title"><a href="">白昼五小时 冰島 【慢慢更新ing。。。</a> <span>15张照片</span></p>
                 </div>
             </div>
@@ -120,7 +140,9 @@
         </div>
         <div class="selected">
             <div class="moment">
-                <a href=""></a>
+                <a href="">
+                    <img src="images/dbmrnrjx.jpg" width="268px" height="110px" alt="">
+                </a>
             </div>
             <div class="activity-online">
                 <h3>线上活动 <span class="ellipsis">......</span>  <span class="bracket">（</span> <a
@@ -147,7 +169,10 @@
                 <h2><a class="sidebar-title" id="sidebar-title-color" href="">电影</a></h2>
                 <ul>
                     <li><a class="sidebar-li-color" href="">影讯&购票</a></li>
-                    <li><a class="sidebar-li-color" href="">选电影</a></li>
+                    <li>
+                        <a class="sidebar-li-color" href="">选电影</a>
+                        <img src="images/new.gif" alt="">
+                    </li>
                     <li><a class="sidebar-li-color" href="">电视剧</a></li>
                     <li><a class="sidebar-li-color" href="">排行榜</a></li>
                     <li><a class="sidebar-li-color" href="">分类</a></li>
@@ -559,7 +584,10 @@
                 <h2><a class="sidebar-title" id="sidebar-title-color" href="">读书</a></h2>
                 <ul>
                     <li><a class="sidebar-li-color" href="">分类浏览</a></li>
-                    <li><a class="sidebar-li-color" href="">阅读</a></li>
+                    <li>
+                        <a class="sidebar-li-color" href="">阅读</a>
+                        <img src="images/new.gif" width="10px"  alt="">
+                    </li>
                     <li><a class="sidebar-li-color" href="">作者</a></li>
                     <li><a class="sidebar-li-color" href="">书评</a></li>
                     <li><a class="sidebar-li-color" href="">购书单</a></li>
@@ -583,7 +611,7 @@
                             <p class="main-content-name"><a href="http://book.douban.com/subject/26670558/">春风沉醉的晚上</a></p>
                             <p class="main-content-author">郁达夫</p>
                             <div class="try-read-container">
-                                <p class="try-read"><a href="http://read.douban.com/reader/ebook/16525465/">免费试读</a></p>
+                                <a href="http://read.douban.com/reader/ebook/16525465/">免费试读</a>
                             </div>
                         </li>
                         <li class="main-content-item">
@@ -595,7 +623,7 @@
                             <p class="main-content-name"><a href="http://book.douban.com/subject/26686231/">困在宜家衣柜里的苦行僧</a></p>
                             <p class="main-content-author">[法]罗曼·普埃尔多拉</p>
                             <div class="try-read-container">
-                                <p class="try-read"><a href="http://read.douban.com/reader/ebook/17796664/">免费试读</a></p>
+                                <a href="http://read.douban.com/reader/ebook/17796664/">免费试读</a>
                             </div>
                         </li>
                         <li class="main-content-item">
@@ -607,7 +635,7 @@
                             <p class="main-content-name"><a href="">山丘上的修道院</a></p>
                             <p class="main-content-author">范毅舜</p>
                             <div class="try-read-container">
-                                <p class="try-read"><a href="">免费试读</a></p>
+                                <a href="">免费试读</a>
                             </div>
                         </li>
                         <li class="main-content-item">
@@ -619,7 +647,7 @@
                             <p class="main-content-name"><a href="">谋杀似水年华</a></p>
                             <p class="main-content-author">蔡骏 </p>
                             <div class="try-read-container">
-                                <p class="try-read"><a href="">免费试读</a></p>
+                                <a href="">免费试读</a>
                             </div>
                         </li>
                     </ul>
@@ -638,7 +666,7 @@
                             <p class="main-content-author">徐晚晴</p>
                             <p class="main-content-price">1.99元</p>
                             <div class="try-read-container">
-                                <p class="try-read"><a href="">免费试读</a></p>
+                                <a href="">免费试读</a>
                             </div>
                         </li>
                         <li class="main-content-item">
@@ -651,7 +679,7 @@
                             <p class="main-content-author">〔德〕梁柯</p>
                             <p class="main-content-price">1.99元</p>
                             <div class="try-read-container">
-                                <p class="try-read"><a href="">免费试读</a></p>
+                                <a href="">免费试读</a>
                             </div>
                         </li>
                         <li class="main-content-item">
@@ -664,7 +692,7 @@
                             <p class="main-content-author">十页</p>
                             <p class="main-content-price">1.99元</p>
                             <div class="try-read-container">
-                                <p class="try-read"><a href="">免费试读</a></p>
+                                <a href="">免费试读</a>
                             </div>
                         </li>
                         <li class="main-content-item">
@@ -677,7 +705,7 @@
                             <p class="main-content-author">苏枕书</p>
                             <p class="main-content-price">1.99元</p>
                             <div class="try-read-container">
-                                <p class="try-read"><a href="">免费试读</a></p>
+                                <a href="">免费试读</a>
                             </div>
                         </li>
                     </ul>
@@ -823,7 +851,7 @@
                         <li>
                             <div class="main-content-pic">
                                 <a href="http://music.douban.com/subject/26709181/">
-                                    <img src="images/lrh.jpg" height="80px" width="80px" alt="">
+                                    <img src="images/lrh.jpg" height="79px" width="82px" alt="">
                                 </a>
                             </div>
                             <p class="main-content-name"><a href="http://music.douban.com/subject/26709181/">2.有理想</a></p>
@@ -833,7 +861,7 @@
                         <li>
                             <div class="main-content-pic">
                                 <a href="http://music.douban.com/subject/26674378/">
-                                    <img src="images/ljj.jpg" height="80px" width="80px" alt="">
+                                    <img src="images/ljj.jpg" height="74px" width="82px" alt="">
                                 </a>
                             </div>
                             <p class="main-content-name"><a href="http://music.douban.com/subject/26674378/">3.和自己對話</a></p>
@@ -843,7 +871,7 @@
                         <li>
                             <div class="main-content-pic">
                                 <a href="http://music.douban.com/subject/26686676/">
-                                    <img src="images/yqh.jpg" height="80px" width="80px" alt="">
+                                    <img src="images/yqh.jpg" height="70px" width="93px" alt="">
                                 </a>
                             </div>
                             <p class="main-content-name"><a href="http://music.douban.com/subject/26631026/">4.如果大家都擁有海</a></p>
@@ -892,39 +920,35 @@
                         </li>
                     </ul>
                 </div>
-                <div class="mainabelow-part">
+                <div class="mainbelow-part">
                     <h3>热门歌单<span class="ellipsis">......</span> <span class="bracket">（</span><a
                             href="http://music.douban.com/programmes/">更多</a><span class="bracket">）</span></h3>
                     <ul class="main-content-list">
                         <li>
-                            <div class="main-content-pic">
-                                <a href="http://music.douban.com/programme/298356">
-                                    <img src="images/p1.png" height="80px" width="80px" alt="">
-                                </a>    
+                            <div class="main-content-pic" style="width:80px height:80px">
+                                <img src="images/p1.png" height="80px" width="80px" alt="">
                             </div>
+                            <a href="http://music.douban.com/programme/298356"></a>
                             <p class="list-title">搜罗出来的小众口味</p>
                         </li>
                         <li>
                             <div class="main-content-pic">
-                                <a href="http://music.douban.com/programme/1369783">
-                                    <img src="images/p2.png" height="80px" width="80px" alt="">
-                                </a>
+                                <img src="images/p2.png" height="80px" width="80px" alt="">
+                                <a href="http://music.douban.com/programme/1369783"></a>
                             </div>
                             <p class="list-title">不一样的日语歌</p>
                         </li>
                         <li>
                             <div class="main-content-pic">
-                                <a href="http://music.douban.com/programme/720974">
-                                    <img src="images/p3.png" height="80px" width="80px" alt="">
-                                </a>
+                                <img src="images/p3.png" height="80px" width="80px" alt="">
+                                <a href="http://music.douban.com/programme/720974"></a>
                             </div>
                             <p class="list-title">不可不听的英文song</p>
                         </li>
                         <li>
                             <div class="main-content-pic">
-                                <a href="http://music.douban.com/programme/264102">
-                                    <img src="images/p4.png" height="80px" width="80px" alt="">
-                                </a>
+                                <img src="images/p4.png" height="80px" width="80px" alt="">
+                                <a href="http://music.douban.com/programme/264102"></a>
                             </div>
                             <p class="list-title">单曲循环之～</p>
                         </li>
@@ -939,7 +963,7 @@
                         <li class="hot-musicer-item">
                             <div class="hot-musicer-pic">
                                 <a href="">
-                                    <img src="" alt="">
+                                    <img src="images/yxy.jpg" alt="">
                                 </a>
                             </div>
                             <div class="hot-musicer-info">
@@ -951,7 +975,7 @@
                         <li class="hot-musicer-item">
                             <div class="hot-musicer-pic">
                                 <a href="">
-                                    <img src="" alt="">
+                                    <img src="images/jwq.jpg" alt="">
                                 </a>
                             </div>
                             <div class="hot-musicer-info">
@@ -963,7 +987,7 @@
                         <li class="hot-musicer-item">
                             <div class="hot-musicer-pic">
                                 <a href="">
-                                    <img src="" alt="">
+                                    <img src="images/btbl.jpg" alt="">
                                 </a>
                             </div>
                             <div class="hot-musicer-info">
@@ -975,7 +999,7 @@
                         <li class="hot-musicer-item">
                             <div class="hot-musicer-pic">
                                 <a href="">
-                                    <img src="" alt="">
+                                    <img src="images/fsds.jpg" alt="">
                                 </a>
                             </div>
                             <div class="hot-musicer-info">
@@ -987,7 +1011,7 @@
                         <li class="hot-musicer-item">
                             <div class="hot-musicer-pic">
                                 <a href="">
-                                    <img src="" alt="">
+                                    <img src="images/chy.jpg" alt="">
                                 </a>
                             </div>
                             <div class="hot-musicer-info">
@@ -1000,9 +1024,334 @@
                 </div>
             </div>
             <div class="clear"></div>
-
         </div>
     </div>
-
+    <div class="market-section">
+        <div class="out-frame">
+            <div class="leftside-bar">
+                <h2><a class="sidebar-title" id="sidebar-title-color" href="">市集</a></h2>
+                <ul>
+                    <li><a class="sidebar-li-color" href="">美食</a></li>
+                    <li><a class="sidebar-li-color" href="">服饰</a></li>
+                    <li><a class="sidebar-li-color" href="">配饰</a></li>
+                    <li><a class="sidebar-li-color" href="">包袋</a></li>
+                    <li><a class="sidebar-li-color" href="">鞋靴</a></li>
+                    <li><a class="sidebar-li-color" href="">美容护肤</a></li>
+                    <li><a class="sidebar-li-color" href="">家居生活</a></li>
+                </ul>
+            </div>
+            <div class="main">
+                <h3>热门商品<span class="ellipsis">......</span> <span class="bracket">（</span><a
+                        href="http://book.douban.com/latest">更多</a><span class="bracket">）</span></h3>
+                <div class="main-content">
+                    <div class="column-item">
+                        <a href="https://market.douban.com/item/55474/?dcs=anonymous-home-main-sku&dcm=douban">
+                            <img src="images/wwwzyx.jpg" height="250px" width="250px" alt="">
+                        </a>
+                        <p class="title"><a href="https://market.douban.com/item/55474/?dcs=anonymous-home-main-sku&dcm=douban">望外 文字游戏 Words Play 字母M - 字母永生花</a></p>
+                        <p class="price"><a href="https://market.douban.com/item/55474/?dcs=anonymous-home-main-sku&dcm=douban">436.00</a></p>
+                    </div>
+                    <div class="column-item">
+                        <a href="https://market.douban.com/item/56700/?dcs=anonymous-home-main-sku&dcm=douban">
+                            <img src="images/ytddhb.jpg" height="250px" width="250px" alt="">
+                        </a>
+                        <p class="title"><a href="https://market.douban.com/item/56700/?dcs=anonymous-home-main-sku&dcm=douban">【有态度的红包】利是封2016新年新款高档创意个性趣味毛毡文字超厚</a></p>
+                    </div>
+                    <div class="right-part" style="width:260px;height:285px">
+                        <div class="right-part-item">
+                            <a href="https://market.douban.com/item/49550/?dcs=anonymous-home-other-sku&dcm=douban">
+                                <img src="images/pisn.jpg" alt="" height="110px" width="110px">
+                            </a>
+                            <p><a href="https://market.douban.com/item/49550/?dcs=anonymous-home-other-sku&dcm=douban">【现货】PISN2015冬季新品 超美喇叭袖 优雅套头羊毛针织衫</a></p>
+                        </div>
+                        <div class="right-part-item">
+                            <a href="https://market.douban.com/item/56239/?dcs=anonymous-home-other-sku&dcm=douban"><img src="images/tzsyl.jpg" height="110px" width="110px" alt=""></a>
+                            <p><a href="https://market.douban.com/item/56239/?dcs=anonymous-home-other-sku&dcm=douban">太子盛一伦联名款 #BBF小熊香水经典系列男士香水（金色）</a></p>
+                        </div>
+                        <div class="right-part-item">
+                            <a href="https://market.douban.com/item/55987/?dcs=anonymous-home-other-sku&dcm=douban"><img src="images/2016fd.jpg" height="110px" width="110px" alt=""></a>
+                            <p><a href="https://market.douban.com/item/55987/?dcs=anonymous-home-other-sku&dcm=douban">hanalice2016福袋</a></p>
+                        </div>
+                        <div class="right-part-item">
+                            <a href="https://market.douban.com/item/50498/?dcs=anonymous-home-other-sku&dcm=douban"><img src="images/wgys.jpg" height="110px" width="110px" alt=""></a>
+                            <p><a href="https://market.douban.com/item/50498/?dcs=anonymous-home-other-sku&dcm=douban">稻易五谷养生礼盒[10斤大米搭配五谷]</a></p>
+                        </div>
+                    </div>
+                    <div class="right-part" style="width:260px;height:285px">
+                        <div class="right-part-item">
+                            <a href="https://market.douban.com/item/51012/?dcs=anonymous-home-other-sku&dcm=douban"><img src="images/studio.jpg" height="110px" width="110px" alt=""></a>
+                            <p><a href="https://market.douban.com/item/51012/?dcs=anonymous-home-other-sku&dcm=douban">J匠人studio秋冬新款真皮复古水桶包</a></p>
+                        </div>
+                        <div class="right-part-item">
+                            <a href="https://market.douban.com/item/19161/?dcs=anonymous-home-other-sku&dcm=douban"><img src="images/sshs.jpg" height="110px" width="110px" alt=""></a>
+                            <p><a href="https://market.douban.com/item/19161/?dcs=anonymous-home-other-sku&dcm=douban">十四行诗 台湾手工黑糖礼盒</a></p>
+                        </div>
+                        <div class="right-part-item">
+                            <a href="https://market.douban.com/item/47019/?dcs=anonymous-home-other-sku&dcm=douban"><img src="images/daniel.jpg" height="110px" width="110px" alt=""></a>
+                            <p><a href="https://https://market.douban.com/item/47019/?dcs=anonymous-home-other-sku&dcm=douban">Daniel Wellington 经典系列 尼龙表带 情侣石英腕表</a></p>
+                        </div>
+                        <div class="right-part-item">
+                            <a href="https://market.douban.com/item/56054/?dcs=anonymous-home-other-sku&dcm=douban"><img src="images/yshh.jpg" height="110px" width="110px" alt=""></a>
+                            <p><a href="https://market.douban.com/item/56054/?dcs=anonymous-home-other-sku&dcm=douban">永生花盒 | 当你途径我的盛放</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rightside-bar">
+                <h3>热门店铺<span class="ellipsis">......</span> <span class="bracket">（</span><a
+                        href="http://book.douban.com/latest">更多</a><span class="bracket">）</span></h3>
+                <ul class="hot-shop">
+                    <li class="hot-shop-list">
+                        <a href="https://market.douban.com/weizhichu/?dcs=anonymous-home-hot-shop&dcm=douban"><img src="images/wzczs.jpg" height="60px" width="60px" alt=""></a>
+                        <p class="title"><a href="https://market.douban.com/weizhichu/?dcs=anonymous-home-hot-shop&dcm=douban">味之初芝士蛋糕乐园</a></p>
+                        <p class="info">专营芝士蛋糕。坚持生产短保质期、无添加的食物。主要食材都源自...</p>
+                    </li>
+                    <li class="hot-shop-list">
+                        <a href="https://market.douban.com/myladywine/?dcs=anonymous-home-hot-shop&dcm=douban"><img src="images/nsmj.jpg" height="60px" width="60px" alt=""></a>
+                        <p class="title"><a href="https://market.douban.com/myladywine/?dcs=anonymous-home-hot-shop&dcm=douban">女神美酒</a></p>
+                        <p class="info">我是弗洛拉 国际Wset3级品酒师,在古罗马神话中 花神''...</p>
+                    </li>
+                    <li class="hot-shop-list">
+                        <a href="https://market.douban.com/bbf/?dcs=anonymous-home-hot-shop&dcm=douban"><img src="images/bbf.jpg" height="60px" width="60px" alt=""></a>
+                        <p class="title"><a href="https://market.douban.com/bbf/?dcs=anonymous-home-hot-shop&dcm=douban">BBF</a></p>
+                        <p class="info">#BBF 中国高端礼物品牌 #BBF是最为专业的高端礼品采...</p>
+                    </li>
+                    <li class="hot-shop-list">
+                        <a href="https://market.douban.com/dongxi/?dcs=anonymous-home-hot-shop&dcm=douban"><img src="images/dxsp.jpg" height="60px" width="60px" alt=""></a>
+                        <p class="title"><a href="https://market.douban.com/dongxi/?dcs=anonymous-home-hot-shop&dcm=douban">东西尚品</a></p>
+                        <p class="info">生活美学产品集成店</p>
+                    </li>
+                </ul>
+                <a href="https://market.douban.com/page/nianhuo/?dcs=anonymous-home-promo&dcm=douban"><img src="images/xcnh.jpg" height="197px" width="265px" alt=""></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="onephoto-section">
+        <div class="out-frame">
+            <div class="leftside-bar">
+                <h2><a class="sidebar-title" id="sidebar-title-color" href="http://ypy.douban.com/">一拍一</a></h2>
+                <ul>
+                    <li><a class="sidebar-li-color" href="http://ypy.douban.com/package/cate/2">婚纱</a></li>
+                    <li><a class="sidebar-li-color" href="http://ypy.douban.com/package/cate/1">写真</a></li>
+                    <li><a class="sidebar-li-color" href="http://ypy.douban.com/package/cate/5">私房</a></li>
+                    <li><a class="sidebar-li-color" href="http://ypy.douban.com/package/cate/7">旅拍</a></li>
+                    <li><a class="sidebar-li-color" href="http://ypy.douban.com/package/cate/3">亲子</a></li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="main-content">
+                    <h3>写真摄影服务<span class="ellipsis">......</span> <span class="bracket">（</span><a
+                            href="http://ypy.douban.com/package/cate/1">更多</a><span class="bracket">）</span></h3>
+                    <div class="main-content-item">
+                        <a href="http://ypy.douban.com/topic/2137"><img src="images/yqgxn.jpg" width="261px" height="196px" alt=""></a>
+                        <p class="title"><a href="http://ypy.douban.com/topic/2137">一起过新年</a></p>
+                    </div>
+                    <div class="main-content-item">
+                        <a href=""><img src="images/wdsnsd.jpg" width="261px" height="196px" alt="http://ypy.douban.com/topic/2138"></a>
+                        <p class="title"><a href="http://ypy.douban.com/topic/2138">我的少女时代</a></p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="main-content">
+                    <h3>婚纱摄影服务<span class="ellipsis">......</span> <span class="bracket">（</span><a
+                            href="http://ypy.douban.com/package/cate/2">更多</a><span class="bracket">）</span></h3>
+                    <div class="main-content-item">
+                        <a href=""><img src="images/djnxzc.jpg" width="261px" height="196px" alt="http://ypy.douban.com/topic/2135"></a>
+                        <p class="title"><a href="http://ypy.douban.com/topic/2135">冬季暖心专场</a></p>
+                    </div>
+                    <div class="main-content-item">
+                        <a href="http://ypy.douban.com/package/1248"><img src="images/adssh.jpg" width="261px" height="196px" alt=""></a>
+                        <p class="title"><a href="http://ypy.douban.com/package/1248">爱的什刹海</a></p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <h3>更多<span class="ellipsis">......</span> <span class="bracket">（</span><a
+                        href="http://ypy.douban.com/package/cate/2">更多</a><span class="bracket">）</span></h3>
+            </div>
+            <div class="rightside-bar">
+                <h3>标签<span class="ellipsis">......</span></h3>
+                <div class="label-content">
+                    <div class="label-list" id="label-list1">
+                        <p class="type">风格</p>
+                        <ul>
+                            <li><a href="">自然</a></li>
+                            <li><a href="">复古</a></li>
+                            <li><a href="">少女</a></li>
+                            <li><a href="">清新</a></li>
+                            <li><a href="">日系</a></li>
+                            <li><a href="">情绪</a></li>
+                            <li><a href="">女性</a></li>
+                            <li><a href="">和服</a></li>
+                            <li><a href="">唯美</a></li>
+                            <li><a href="">夏天</a></li>
+                        </ul>
+                    </div>
+                    <div class="label-list">
+                        <p class="type">城市</p>
+                        <ul>
+                            <li><a href="">北京</a></li>
+                            <li><a href="">上海</a></li>
+                            <li><a href="">广州</a></li>
+                            <li><a href="">成都</a></li>
+                            <li><a href="">深圳</a></li>
+                            <li><a href="">厦门</a></li>
+                            <li><a href="">武汉</a></li>
+                            <li><a href="">南京</a></li>
+                            <li><a href="">杭州</a></li>
+                            <li><a href="">沈阳</a></li>
+                            <li><a href="">三亚</a></li>
+                            <li><a href="">重庆</a></li>
+                            <li><a href="">青岛</a></li>
+                            <li><a href="">海口</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="photo-service">
+                    <p>微信扫一扫, 了解最新拍摄服务:</p>
+                    <img src="images/photo-code.jpg" height="100px" width="100px" alt="">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="onecity-section">
+        <div class="out-frame">
+            <div class="leftside-bar">
+                <h2><a class="sidebar-title" id="sidebar-title-color" href="http://www.douban.com/location/">同城</a></h2>
+                <ul>
+                    <li><a class="sidebar-li-color" href="http://www.douban.com/location/chengdu/events">同城活动</a></li>
+                    <li><a class="sidebar-li-color" href="http://www.douban.com/location/chengdu/hosts">主办方</a></li>
+                    <li><a class="sidebar-li-color" href="http://www.douban.com/location/drama/">舞台剧</a></li>
+                </ul>
+            </div>
+            <div class="main">
+                <h3>成都·本周热门活动<span class="ellipsis">......</span> <span class="bracket">（</span><a
+                        href="http://www.douban.com/location/">更多</a><span class="bracket">）</span></h3>
+                <ul>
+                    <li>
+                        <a href="http://www.douban.com/event/25601696/"><img src="images/yqxby.jpg" alt=""></a>
+                        <div class="list-info">
+                            <p class="title"><a href="http://www.douban.com/event/25601696/">一起学表演，释放压力，找寻自我!</a></p>
+                            <p class="list-desc">12月8日 周二 - 1月31日 周日
+                                新希望路4号 曼哈顿自然派2..<br>63人关注</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="http://www.douban.com/event/25846019/"><img src="images/jtyyjh.jpg" alt=""></a>
+                        <div class="list-info">
+                            <p class="title"><a href="http://www.douban.com/event/25846019/">吉他音乐聚会，免费录制视频</a></p>
+                            <p class="list-desc">12月5日 周六 - 1月31日 周日
+                                成都洪河大道北路上东阳光2...<br>8人关注</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="http://www.douban.com/event/26109062/"><img src="images/kxmh.jpg" alt=""></a>
+                        <div class="list-info">
+                            <p class="title"><a href="http://www.douban.com/event/26109062/">【成都】开心麻花《旋转卡门》 <span>正在售票</span></a></p>
+                            <p class="list-desc">3月18日 周五 - 3月19日 周六
+                                四川省成都市锦江区人民东...<br>9人关注</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="http://www.douban.com/event/26082722/"><img src="images/cdzayh.jpg" alt=""></a>
+                        <div class="list-info">
+                            <p class="title"><a href="http://www.douban.com/event/26082722/">9折|成都站爱乐汇· 《夜的钢琴曲》—石进钢琴作品音乐会 <span>正在售票</span></a></p>
+                            <p class="list-desc">5月21日 周六 19:30 - 21:30
+                                四川省成都市锦江区水碾河...<br>15人关注</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="rightside-bar">
+                <h3>活动标签<span class="ellipsis">......</span></h3>
+                <ul class="activity-content">
+                    <li class="activity-item">
+                        <p class="activity-title"><a href="http://www.douban.com/location/chengdu/events/week-music">音乐<span>》</span></a></p>
+                        <ul class="activity-list">
+                            <li><a href="">小型现场</a></li>
+                            <li><a href="">音乐会</a></li>
+                            <li><a href="">演唱会</a></li>
+                            <li><a href="">音乐节</a></li>
+                        </ul>
+                    </li>
+                    <li class="activity-item">
+                        <p class="activity-title"><a href="hhttp://www.douban.com/location/chengdu/events/week-drama">戏剧<span>》</span></a></p>
+                        <ul class="activity-list">
+                            <li><a href="">话剧</a></li>
+                            <li><a href="">音乐剧</a></li>
+                            <li><a href="">舞剧</a></li>
+                            <li><a href="">歌剧</a></li>
+                            <li><a href="">戏曲</a></li>
+                        </ul>
+                    </li>
+                    <li class="activity-item">
+                        <p class="activity-title"><a href="http://www.douban.com/location/chengdu/events/week-party">聚会<span>》</span></a></p>
+                        <ul class="activity-list">
+                            <li><a href="">生活</a></li>
+                            <li><a href="">摄影</a></li>
+                            <li><a href="">外语</a></li>
+                            <li><a href="">桌游</a></li>
+                            <li><a href="">交友</a></li>
+                            <li><a href="">夜店</a></li>
+                            <li><a href="">集市</a></li>
+                        </ul>
+                    </li>
+                    <li class="activity-item">
+                        <p class="activity-title"><a href="http://www.douban.com/location/chengdu/events/week-film">电影<span>》</span></a></p>
+                        <ul class="activity-list">
+                            <li><a href="">主题放映</a></li>
+                            <li><a href="">影展</a></li>
+                            <li><a href="">影院活动</a></li>
+                        </ul>
+                    </li>
+                    <li class="activity-item">
+                        <p class="activity-title"><a href="http://www.douban.com/location/chengdu/events/week-all">其他<span>》</span></a></p>
+                        <ul class="activity-list">
+                            <li><a href="">讲座</a></li>
+                            <li><a href="">展览</a></li>
+                            <li><a href="">运动</a></li>
+                            <li><a href="">旅行</a></li>
+                            <li><a href="">公益</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="out-frame">
+            <p>© 2005－2016 douban.com, all rights reserved 北京豆网科技有限公司<br>
+                <a href="http://www.miibeian.gov.cn/">京ICP证090015号</a>京ICP备11027288号 网络视听许可证 <a
+                    href="http://www.douban.com/about?topic=licence">0110418号</a><br>
+                京网文[2015]2026-368号  京公网安备110105000728  新出网证(京)字129号<br>
+                违法和不良信息举报电话：4006910007<br>
+                <a href=""><img src="images/zghlwjw.png" width="15px" height="12px" alt="">中国互联网举报中心</a>电话：12377
+            </p>
+            <ul>
+                <li><a href="http://www.douban.com/about">关于豆瓣</a></li>
+                <li><a href="http://www.douban.com/jobs">在豆瓣工作</a></li>
+                <li><a href="http://www.douban.com/about?topic=contactus">联系我们</a></li>
+                <li><a href="http://www.douban.com/about?policy=disclaimer">免责声明</a></li>
+                <li><a href="http://help.douban.com/?app=main">帮助中心</a></li>
+                <li><a href="http://www.douban.com/doubanapp/">移动应用</a></li>
+                <li><a href="http://www.douban.com/partner/">豆瓣广告</a></li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </footer>d3wq
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
